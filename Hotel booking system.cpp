@@ -5,7 +5,7 @@
 #include <dos.h>
 #define size 51
 
-void mainm(void);
+void main(void);
 void entry(void);
 void modify(void);
 void delet(void);
@@ -38,13 +38,13 @@ sr[0]=1;dr[0]=1; // THE MAIN LOGIC !!
 for(li=10;li<71;li++)
 {
 gotoxy(li,15);
-delay(30);
+delay(10);
 printf("\/");
 }
 for(li=70;li>=10;li--)
 {
 gotoxy(li,22);
-delay(30);
+delay(10);
 printf("\\");
 }
 for(lp=16;lp<=21;lp++)
@@ -60,35 +60,35 @@ delay(100);
 printf("=");
 }
 gotoxy(16,17);
-textcolor(BLINK + MAGENTA);
+textcolor(BLINK + ORANGE);
 cprintf("Welcome To The NALAIQUE's Hotel Reservation System");
 gotoxy(12,20);
 
-cprintf("Press Any Key To ..........Continue");
+  
 getch();
-mainm();
+main();
 }// Main Fuction End
 
 //Main Menu Function
-void mainm(void)
+void main(void)
 {
 clrscr();
 for(li=30;li<=50;li++)
 {
 gotoxy(li,14);
-delay(30);
+delay(10);
 printf("*");
 }
 for(li=50;li>=30;li--)
 {
 gotoxy(li,30);
-delay(30);
+delay(10);
 printf("*");
 }
 for(lp=15;lp<30;lp++)
 {
 gotoxy(30,lp);
-delay(100);
+delay(50);
 printf("|");
 }
 for(lp=29;lp>=15;lp--)
@@ -98,13 +98,13 @@ delay(100);
 printf("|");
 }
 gotoxy(15,10);
-textcolor(LIGHTGRAY);
+textcolor(WHITE);
 cprintf("Press the corresponding Keys for the desired action");
 gotoxy(33,16);
 textcolor(BROWN);
 cprintf("R: Reservation");
 gotoxy(33,19);
-textcolor(LIGHTMAGENTA);
+textcolor(MAGENTA);
 cprintf("V: Room Status");
 gotoxy(33,22);
 textcolor(LIGHTBLUE);
